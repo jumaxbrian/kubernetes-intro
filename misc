@@ -1,0 +1,17 @@
+minikube status
+kubectl create -f pod.yaml 
+kubectl get pods --all-namespaces
+kubectl create -f pod.yaml 
+kubectl get pods
+kubectl delete pods ghost
+kubectl create -f rs.yaml 
+kubectl delete pods ghost-6kxg5
+kubectl create -f rs.yaml 
+kubectl delete replicasets ghost
+kubectl create -f rs.yaml 
+kubectl create -f svc.yaml 
+kubectl get services
+minikube service ghost
+kubectl get rs
+kubectl scale rs ghost --replicas=2
+minikube stop
